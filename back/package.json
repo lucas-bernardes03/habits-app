@@ -12,11 +12,17 @@
   "dependencies": {
     "@fastify/cors": "^8.3.0",
     "@prisma/client": "^5.1.1",
-    "fastify": "^4.21.0"
+    "dayjs": "^1.11.9",
+    "fastify": "^4.21.0",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@types/node": "^20.5.7",
     "prisma": "^5.1.1",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }
