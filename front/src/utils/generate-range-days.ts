@@ -5,7 +5,9 @@ export function generateDatesFromBeginning(){
     
     const today = new Date()
     const firstDayYear = dayjs().startOf('year')
-    const firstDayMonth = dayjs(today).startOf('month')
+
+    const firstDayMonth = dayjs(today).startOf('month').add(-1, 'month')
+
     let compareDate = firstDayMonth
 
     while(compareDate.isBefore(today)){
