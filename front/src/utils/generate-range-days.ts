@@ -4,6 +4,8 @@ export function generateDatesFromBeginning(){
     const dates = []
     
     const today = new Date()
+    
+    //inicio do ano ou do mes
     const firstDayYear = dayjs().startOf('year')
 
     const firstDayMonth = dayjs(today).startOf('month')

@@ -55,7 +55,7 @@ export function NewHabitForm(){
                 id="title" 
                 placeholder="ex.: Academia, beber água, estudar, etc..." 
                 autoFocus 
-                className="p-4 rounded-lg mt-3 bg-habitLightColor text-white placeholder:text-habitLightText"
+                className="p-4 rounded-lg mt-3 bg-habitLightColor text-white placeholder:text-habitLightText focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-600"
                 onChange={event => setTitle(event.target.value)}
                 value={title}/>
 
@@ -70,9 +70,9 @@ export function NewHabitForm(){
                             onCheckedChange={() => handleToggleWeekDay(index)} 
                             checked={weekDays.includes(index)}
                             key={weekDay} 
-                            className='flex items-center gap-3 group'>
+                            className='flex items-center gap-3 group focus:outline-none'>
                             
-                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-habitDefaultBg border-2 border-habitDefaultBorder group-data-[state=checked]:bg-green-600 group-data-[state=checked]:border-green-600'>
+                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-habitDefaultBg border-2 border-habitDefaultBorder group-data-[state=checked]:bg-green-600 group-data-[state=checked]:border-green-600 transition-colors group-focus:ring-2 group-focus:ring-green-600 group-focus:ring-offset-2 group-focus:ring-offset-green-600'>
                                 <Checkbox.Indicator>
                                     <Check size={20} className='text-white'/>
                                 </Checkbox.Indicator>
@@ -87,10 +87,10 @@ export function NewHabitForm(){
                 
             </div>
 
-            <button type="submit" className="mt-6 rounded-lg p-4 gap-3 flex items-center font-semibold bg-green-600 justify-center hover:bg-green-500">
+            <button type="submit" className="mt-6 rounded-lg p-4 gap-3 flex items-center font-semibold bg-green-600 justify-center hover:bg-green-500 transition-colors   focus:outline-none  focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-400">
                 <Check size={20} weight="bold" />
                 Confirmar
-            </button>
+            </button>           
         </form>
     )
 }
